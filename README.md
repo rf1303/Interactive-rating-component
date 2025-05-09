@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot01.jpeg)
+![](./screenshot 01.jpeg)
 ![](./screenshot 02.jpeg)
 ![](./screenshot 03.jpeg)
 ![](./screenshot 04.jpeg)
