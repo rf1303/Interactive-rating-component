@@ -19,8 +19,8 @@ body {
 
 
 .wrappers__component {
-  /* display: none;  */
-  background-color: $grey-800-color;
+/* background: #212A34; */
+background: linear-gradient(180deg, rgba(33, 42, 52, 1) 0%, rgba(33, 42, 52, 1) 20%, rgba(24, 30, 39, 1) 100%);
   padding: $space-300;
   border-radius: $space-200;
   width: min(20.438rem, 100%);
@@ -61,7 +61,7 @@ body {
   border: none; 
 } 
 
-.visually-hidden {
+.access-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -70,7 +70,12 @@ body {
   clip: rect(0, 0, 0, 0);
   border: none;
 }
-.wrappers__feedback {
+
+.number__check {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .feedback__number {
@@ -89,10 +94,12 @@ body {
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .3), .4px .6px 6px rgba(0, 0, 0, .3) inset;
   &:hover {
     background-color: $orange-400-color;
+    box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
     color: $black-color;
   }
   &:focus {
     background-color: $orange-400-color;
+    box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
     color: $black-color;
   }
   &:active {
@@ -100,58 +107,35 @@ body {
     color: $black-color;
   }
 }
-// .number__nro {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: $space-550;
-//   height: $space-550;
-//   border-radius: 50%;
-//   background-color: $grey-900-color;
-//   color: $grey-500-color;
-//   font-size: $textMobile-5;
-//   font-weight: 600;
-//   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .3), .4px .6px 6px rgba(0, 0, 0, .3) inset;
-//   cursor: pointer;
-//   transition: background-color 0.3s, color 0.3s;
-//
-//   &:hover {
-//     background-color: $orange-400-color;
-//     color: $black-color;
-//   }
-// }
-
-
-.number__check {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
+.number__check:hover + .feedback__number  {
+    background-color: $orange-400-color;
+    box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
+    color: $black-color;
+}
+.number__check:focus + .feedback__number  {
+    background-color: $orange-400-color;
+    box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
+    color: $black-color;
 }
 
-// .number__check {
-//   opacity: 1;
-//   width: 5px;
-//   height: 5px;
-// }
+.number__check:checked  + .feedback__number {
+    background-color: $white-color;
+    box-shadow: .8px 0.8px 9px 1px rgba(0, 0, 0, .5) inset;
+    color: $black-color;
+}
 
 .button__submit {
   width: 100%;
   text-transform: uppercase;
   font-size: textMobile-5;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 1.87px;
   background-color: $orange-400-color;
   border-radius: $space-350;
   padding: $space-200 0;
   margin-top: $space-300;
-  box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, .5), .8px .8px 8px rgba(0, 0, 0, .3) inset;
+  box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, .5), .8px .8px 10px rgba(0, 0, 0, .6) inset;
   outline: none;
   &:focus {
     background-color: $white-color;
@@ -169,7 +153,7 @@ body {
 
 .wrappers__selected {
   display: grid; 
-  background-color: $grey-800-color;
+  background: linear-gradient(180deg, rgba(33, 42, 52, 1) 0%, rgba(33, 42, 52, 1) 20%, rgba(24, 30, 39, 1) 100%);
   padding: $space-400 $space-300;
   border-radius: $space-275;
   width: min(20.438rem, 100%);
@@ -211,17 +195,6 @@ body {
 .display__none {
   display: none;  
 }
- /* This is the key styling for the tabbing */
-        .number__check:focus-visible + span {
-            outline: 2px solid hsl(25, 97%, 53%);
-            outline-offset: 2px;
-        }
-
-        /* Style for selected radio buttons */
-        .number__check:checked + span {
-            background-color: hsl(217, 12%, 63%);
-            color: white;
-        }
 
 @media (min-width: 42.5em) {
   .wrappers__component  {
@@ -278,9 +251,19 @@ body {
   }
 }
 
+.wrappers__selected,
+.wrappers__component {
+  transition: opacity 1s ease;
+  opacity: 0;
 
-
-
+  &:where(:not(.display__none)) {
+    display: allow-discrete grid; 
+    opacity: 1;
+    @starting-style {
+      opacity: 0;
+    }
+  }
+}
 
 
 
