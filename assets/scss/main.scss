@@ -60,6 +60,7 @@ body {
   gap: $space-200;
   border: none; 
 } 
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -72,53 +73,53 @@ body {
 .wrappers__feedback {
 }
 
-// .feedback__number {
-//   width: $space-550;
-//   height: $space-550;
-//   // display: flex;
-//   // justify-content: center;
-//   // align-items: center;
-//   color: $grey-500-color;
-//   padding: .5rem $space-200;
-//   background-color: $grey-900-color;
-//   border-radius: 50%;
-//   font-size: $textMobile-5;
-//   font-weight: 600;
-//   margin-top: $space-200;
-//   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .3), .4px .6px 6px rgba(0, 0, 0, .3) inset;
-//   &:hover {
-//     background-color: $orange-400-color;
-//     color: $black-color;
-//   }
-//   &:focus {
-//     background-color: $orange-400-color;
-//     color: $black-color;
-//   }
-//   &:active {
-//     background-color: $white-color;
-//     color: $black-color;
-//   }
-// }
-.number__nro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.feedback__number {
   width: $space-550;
   height: $space-550;
-  border-radius: 50%;
-  background-color: $grey-900-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $grey-500-color;
+  padding: .5rem $space-200;
+  background-color: $grey-900-color;
+  border-radius: 50%;
   font-size: $textMobile-5;
   font-weight: 600;
+  margin-top: $space-200;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .3), .4px .6px 6px rgba(0, 0, 0, .3) inset;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-
   &:hover {
     background-color: $orange-400-color;
     color: $black-color;
   }
+  &:focus {
+    background-color: $orange-400-color;
+    color: $black-color;
+  }
+  &:active {
+    background-color: $white-color;
+    color: $black-color;
+  }
 }
+// .number__nro {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: $space-550;
+//   height: $space-550;
+//   border-radius: 50%;
+//   background-color: $grey-900-color;
+//   color: $grey-500-color;
+//   font-size: $textMobile-5;
+//   font-weight: 600;
+//   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .3), .4px .6px 6px rgba(0, 0, 0, .3) inset;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s;
+//
+//   &:hover {
+//     background-color: $orange-400-color;
+//     color: $black-color;
+//   }
+// }
 
 
 .number__check {
@@ -210,6 +211,17 @@ body {
 .display__none {
   display: none;  
 }
+ /* This is the key styling for the tabbing */
+        .number__check:focus-visible + span {
+            outline: 2px solid hsl(25, 97%, 53%);
+            outline-offset: 2px;
+        }
+
+        /* Style for selected radio buttons */
+        .number__check:checked + span {
+            background-color: hsl(217, 12%, 63%);
+            color: white;
+        }
 
 @media (min-width: 42.5em) {
   .wrappers__component  {
@@ -229,7 +241,7 @@ body {
     font-weight: 400;
     line-height: 1.8;
   }
-  .wrappers__feedback {
+  .wrappers__access {
     gap: $space-300;
   }
   .feedback__number {

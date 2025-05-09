@@ -52,6 +52,14 @@ img, video, iframe, picture, figure {
   max-width: 100%;
 }
 
+form, input, select, textarea, button, label {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+}
+
 @font-face {
   font-family: "overpass";
   src: url("../fonts/Overpass-VariableFont_wght.ttf");
@@ -120,23 +128,31 @@ body {
   border: none;
 }
 
-.number__nro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.feedback__number {
   width: 2.625rem;
   height: 2.625rem;
-  border-radius: 50%;
-  background-color: #262e38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #969fad;
+  padding: 0.5rem 1rem;
+  background-color: #262e38;
+  border-radius: 50%;
   font-size: 0.875rem;
   font-weight: 600;
+  margin-top: 1rem;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3), 0.4px 0.6px 6px rgba(0, 0, 0, 0.3) inset;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
 }
-.number__nro:hover {
+.feedback__number:hover {
   background-color: #fc7614;
+  color: #000000;
+}
+.feedback__number:focus {
+  background-color: #fc7614;
+  color: #000000;
+}
+.feedback__number:active {
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -229,6 +245,18 @@ body {
   display: none;
 }
 
+/* This is the key styling for the tabbing */
+.number__check:focus-visible + span {
+  outline: 2px solid hsl(25, 97%, 53%);
+  outline-offset: 2px;
+}
+
+/* Style for selected radio buttons */
+.number__check:checked + span {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
 @media (min-width: 42.5em) {
   .wrappers__component {
     width: min(25.75rem, 100%);
@@ -249,7 +277,7 @@ body {
     font-weight: 400;
     line-height: 1.8;
   }
-  .wrappers__feedback {
+  .wrappers__access {
     gap: 1.5rem;
   }
   .feedback__number {
