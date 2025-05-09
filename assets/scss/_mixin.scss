@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+@mixin flexBox( $direction : row , $jc : start, $ai : start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}  
+
+@mixin tgSize($size : .875rem, $weight : 400 ) {
+  font-family: overpass;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin wrappers {
+    width: min(25.75rem, 100%);
+    padding: 2.156rem 1.906rem;
+    border-radius: $space-300;
+}
+
