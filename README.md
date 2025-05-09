@@ -32,7 +32,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot01.jpeg)
-![](./screenshot02.jpeg)
+![](./screenshot002.jpeg)
 ![](./screenshot03.jpeg)
 ![](./screenshot04.jpeg)
 ![](./screenshot05.jpeg)
