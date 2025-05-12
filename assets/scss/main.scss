@@ -11,15 +11,14 @@ body {
   background-color: $grey-950-color; 
   margin: $space-300;//24px
   display: grid;
-  justify-items: center;
-  align-items: center;
+  justify-items: center; 
+  align-items: center; 
   font-family: overpass;
   font-size: $textMobile-5;
 }
 
 
 .wrappers__component {
-/* background: #212A34; */
 background: linear-gradient(180deg, rgba(33, 42, 52, 1) 0%, rgba(33, 42, 52, 1) 20%, rgba(24, 30, 39, 1) 100%);
   padding: $space-300;
   border-radius: $space-200;
@@ -96,31 +95,37 @@ background: linear-gradient(180deg, rgba(33, 42, 52, 1) 0%, rgba(33, 42, 52, 1) 
     background-color: $orange-400-color;
     box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
     color: $black-color;
+    cursor: pointer;
   }
   &:focus {
     background-color: $orange-400-color;
     box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
+    cursor: pointer;
     color: $black-color;
   }
   &:active {
     background-color: $white-color;
     color: $black-color;
+    cursor: pointer;
   }
 }
 .number__check:hover + .feedback__number  {
     background-color: $orange-400-color;
     box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
+    cursor: pointer;
     color: $black-color;
 }
 .number__check:focus + .feedback__number  {
     background-color: $orange-400-color;
     box-shadow: .6px 0.6px 6px 1px rgba(0, 0, 0, .5) inset;
+    cursor: pointer;
     color: $black-color;
 }
 
 .number__check:checked  + .feedback__number {
     background-color: $white-color;
     box-shadow: .8px 0.8px 9px 1px rgba(0, 0, 0, .5) inset;
+    cursor: pointer;
     color: $black-color;
 }
 
@@ -139,14 +144,17 @@ background: linear-gradient(180deg, rgba(33, 42, 52, 1) 0%, rgba(33, 42, 52, 1) 
   outline: none;
   &:focus {
     background-color: $white-color;
+    cursor: pointer;
     color: $black-color;
   }
   &:hover {
     background-color: $white-color;
+    cursor: pointer;
     color: $black-color;
   }
   &:active {
     background-color: $white-color;
+    cursor: pointer;
     color: $black-color;
   }
 }

@@ -76,7 +76,6 @@ body {
 }
 
 .wrappers__component {
-  /* background: #212A34; */
   background: linear-gradient(180deg, rgb(33, 42, 52) 0%, rgb(33, 42, 52) 20%, rgb(24, 30, 39) 100%);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -154,32 +153,38 @@ body {
   background-color: #fc7614;
   box-shadow: 0.6px 0.6px 6px 1px rgba(0, 0, 0, 0.5) inset;
   color: #000000;
+  cursor: pointer;
 }
 .feedback__number:focus {
   background-color: #fc7614;
   box-shadow: 0.6px 0.6px 6px 1px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
   color: #000000;
 }
 .feedback__number:active {
   background-color: #ffffff;
   color: #000000;
+  cursor: pointer;
 }
 
 .number__check:hover + .feedback__number {
   background-color: #fc7614;
   box-shadow: 0.6px 0.6px 6px 1px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
   color: #000000;
 }
 
 .number__check:focus + .feedback__number {
   background-color: #fc7614;
   box-shadow: 0.6px 0.6px 6px 1px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
   color: #000000;
 }
 
 .number__check:checked + .feedback__number {
   background-color: #ffffff;
   box-shadow: 0.8px 0.8px 9px 1px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
   color: #000000;
 }
 
@@ -199,14 +204,17 @@ body {
 }
 .button__submit:focus {
   background-color: #ffffff;
+  cursor: pointer;
   color: #000000;
 }
 .button__submit:hover {
   background-color: #ffffff;
+  cursor: pointer;
   color: #000000;
 }
 .button__submit:active {
   background-color: #ffffff;
+  cursor: pointer;
   color: #000000;
 }
 
